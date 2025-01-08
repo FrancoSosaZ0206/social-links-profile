@@ -9,11 +9,16 @@
 /* HTML Elements */
 
 :root {
+    /* Project colors */
     --green: hsl(75, 94%, 57%);
     --white: hsl(0, 0%, 100%);
     --grey-700: hsl(0, 0%, 20%);
     --grey-800: hsl(0, 0%, 12%);
     --grey-900: hsl(0, 0%, 8%);
+
+    /* My Custom Colors */
+    --yolk-yellow: hsl(54, 86%, 61%);
+    --reddish-orange: hsl(25, 96%, 31%);
 
     font-size: 14px;
 }
@@ -76,13 +81,13 @@ img {
 .location-h3 {
     color: var(--green);
 }
+.location-h3-special {
+    color: var(--reddish-orange);
+}
 .description-p {
     color: var(--white);
 }
-.social-media-link {
-    background: var(--grey-700);
-    color: var(--white);
-
+.social-media-a, .special-a {
     border: none;
     border-radius: 10px;
 
@@ -99,16 +104,40 @@ img {
 
     transition: background 0.3s ease, color 0.3s ease;
 }
+.social-media-a {
+    background: var(--grey-700);
+    color: var(--white);
+}
+.special-a {
+    background: var(--yolk-yellow);
+    color: var(--grey-900);
+
+    font-weight: 900;
+    font-size: 24px;
+}
+.custom-profile-img {
+    object-fit: cover;
+    height: 125px;
+}
 
 /* States */
 
-.social-media-link:hover {
+.social-media-a:hover {
     background: var(--green);
     color: var(--grey-900);
 }
-.social-media-link:focus {
+.social-media-a:focus {
     background: var(--grey-900);
     color: var(--green);
+}
+
+.special-a:hover {
+    background: var(--reddish-orange);
+    color: var(--yolk-yellow);
+}
+.special-a:focus {
+    background: var(--grey-900);
+    color: var(--yolk-yellow);
 }
 
 
